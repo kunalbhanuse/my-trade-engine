@@ -7,6 +7,8 @@ const envSchema = z.object({
   NODE_ENV: z
     .enum(["development", "production", "test"])
     .default("development"),
+  SHARK_API_KEY: z.string().min(1),
+  SHARK_API_SECRET: z.string().min(1),
 });
 
 // Check process.env against the rules (throws if something is wrong)
