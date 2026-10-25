@@ -8,6 +8,9 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      SHARK_API_KEY: test-key
+      SHARK_API_SECRET: test-secret
 
     steps:
       - uses: actions/checkout@v4
